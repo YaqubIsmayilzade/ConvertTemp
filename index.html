@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="main.js" defer></script>
+
+    <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
+</head>
+<body class="bg-gray-100 w-screen text-black flex justify-center items-center  h-screen">
+
+    <div  id="container" class="absolute w-[360px] h-[320px] mt-5 bg-white shadow-2xl rounded-3xl
+    transition-all duration-300 top-[10%] overflow-hidden lg:scale-125">
+        <h1 class="text-center text-2xl font-bold relative top-6">Temperature Converter</h1>
+        
+        <span class="w-[100%] flex items-center justify-center">
+            <input type="number" class="w-[60%] p-6 pl-3 h-10 mt-10 mx-5 border-2 border-gray-300 rounded-lg text-2xl placeholder:text-xl" 
+            placeholder="55°C"
+            id="text"><br>
+        </span>
+
+        <div id="selector" class=" w-[250px] h-fit relative top-[30px] left-[40px] text-xl ">
+            <span class="">
+                <input type="radio" id="C-to-F" name="deg" >
+                <label for="C-to-F">Celcius to Farenheight</label><br>
+            </span>
+            
+            <span class="mt-8">  
+                <input type="radio" id="C-to-K" name="deg">
+                <label for="C-to-K">Celcius to Kelvin</label>
+            </span>
+        </div>
+
+        <button class="absolute top-[230px] left-1/2 translate-x-[-50%]
+        h-[45px] w-[60%] bg-red-500 rounded-2xl text-white shadow-lg shadow-red-300 text-2xl"
+        onclick="convert()">
+        Convert</button>
+
+        <h1 class="absolute top-[310px] text-5xl w-[100%] text-center" id="output"></h1>
+    </div>
+</body>
+</html>
